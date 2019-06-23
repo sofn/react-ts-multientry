@@ -8,7 +8,7 @@ import {inject, observer} from "mobx-react";
 const {Header} = Layout;
 const {SubMenu} = Menu;
 
-interface EmptyProps extends RouteComponentProps{
+interface EmptyProps extends RouteComponentProps {
 
 }
 
@@ -29,7 +29,7 @@ class HeaderComponent extends Component<EmptyProps, {}> {
 
         let selectMenu = window.location.hash.split("/")[1]
             ? window.location.hash.split("/")[1]
-            : "homePage";
+            : "aaa";
 
         return (
             <Layout>
@@ -38,17 +38,17 @@ class HeaderComponent extends Component<EmptyProps, {}> {
 
                     <Menu theme="dark"
                           mode="horizontal"
-                          defaultSelectedKeys={["homePage"]}
+                          defaultSelectedKeys={["aaa"]}
                           style={{lineHeight: "34px"}}
                           selectedKeys={[selectMenu]}>
                         <SubMenu title={
                             <span className="submenu-title-wrapper"><Icon type="database"/>下拉菜单</span>
                         }>
-                            <Menu.Item className={"app-menu-item"}>
-                                <Link to={"/aaa"}/>
+                            <Menu.Item className={"app-menu-item"}>aaa
+                                <Link to={"/aaa"}>aaa</Link>
                             </Menu.Item>
-                            <Menu.Item className={"app-menu-item"}>
-                                <Link to={"/bbb"}/>
+                            <Menu.Item className={"app-menu-item"}>bbb
+                                <Link to={"/bbb"}>bbb</Link>
                             </Menu.Item>
                         </SubMenu>
 
